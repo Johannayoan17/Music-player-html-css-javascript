@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>johannayoan17</title>
+</head>
+<body>
+  <div class="container">
+    <audio id="player" onended="pr.value = 156">
+      <source src="O Holy Night.mp3" type="audio/mpeg">
+    </audio>
+    <h1>Music Player</h1>
+    <div class="image">
+    <img src="image.gif" height="250" width="300" id="music">
+    </div>
+    <div class="songtitle">
+    <span id="id">O Holy Night.mp3</span>
+    <br>
+    <progress max="156" value="0" id="pr"></progress>
+    </div>
+    <div class="tombol">
+    <button onclick="document.getElementById('player').play()">▶️ Play</button>
+    <button onclick="document.getElementById('player').pause()">⏸️ Pause</button>
+    <br>
+    <p>Volume</p>
+    <button onclick="adjustVolume(0.1)">➕</button>
+    <button onclick="adjustVolume(-0.1)">➖</button>
+    <br>
+    <button><label for="file">Add Music</label></button>
+    <input onchange="change()" type="file" id="file" style="display: none;" accept="audio/mpeg">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
